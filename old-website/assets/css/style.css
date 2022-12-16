@@ -1,0 +1,1091 @@
+/*
+Author: David Wetherell 	
+Project: Studio Fovero
+Devlopment: LimeFlies Development
+Updated: 02/10/2013
+*/
+
+
+@font-face {
+	font-family: 'studiotext';
+   
+    
+     src: url('../fonts/Carlton_Plain.ttf');
+    src: url('../fonts/Carlton_Plain.ttf') format('embedded-opentype'),
+         url('../fonts/Carlton_Plain.ttf') format('woff'),
+         url('../fonts/Carlton_Plain.ttf') format('truetype'),
+         url('../fonts/Carlton_Plain.ttf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+	}
+
+@font-face {
+    font-family: 'AlegreyaRegular';
+    src: url('../fonts/alegreya/Alegreya-Regular-webfont.eot');
+    src: url('../fonts/alegreya/Alegreya-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alegreya/Alegreya-Regular-webfont.woff') format('woff'),
+         url('../fonts/alegreya/Alegreya-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/alegreya/Alegreya-Regular-webfont.svg#AlegreyaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'FFFTusjBold';
+    src: url('../fonts/FFF_Tusi/FFF_Tusj-webfont.eot');
+    src: url('../fonts/FFF_Tusi/FFF_Tusj-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FFF_Tusi/FFF_Tusj-webfont.woff') format('woff'),
+         url('../fonts/FFF_Tusi/FFF_Tusj-webfont.ttf') format('truetype'),
+         url('../fonts/FFF_Tusi/FFF_Tusj-webfont.svg#FFFTusjBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html {overflow: -moz-scrollbars-vertical;} /* Mozilla scrollbar fix */
+.js #wrapper {display:none;} /* If javascript enabled hide all content to avoid FOUC, javascript displays it again */
+#loader { display: inline-block; margin-bottom: 8px; margin-left: 230px;}
+body{font-size:14px; line-height:24px; color:#222; background:#FCF9ED; font-family: Helvetica, Arial, sans-serif;}
+h1 { color:#FFFFFF; font-size:35px; margin-top:-13px; font-family:studiotext;}
+.wf-active h1 {
+    color: #FFFFFF;
+    font-size: 35px;
+
+    margin-top: -11px;
+    padding-bottom: 20px;
+     font-family:studiotext;
+}
+h2 {    height: 50px;
+    margin: 0 0 20px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 920px;}
+
+h6 { 
+    font-family: studiotext;
+    font-size: 32px;
+    font-weight: 200;
+
+}
+p { margin:0 0 20px;  font-size:23px; font-family:studiotext;}
+svg { position:absolute !important; left:180px; }
+
+.content { width:920px; margin:0 auto; font-size:14px; color:#685254; padding: 100px 20px 0 20px; position:relative;}
+.sub-content {    height: 600px;
+    margin: 0 auto;
+    padding: 120px 60px 0;
+    width: 920px; }
+.sub-content h3 { font-size:26px; letter-spacing: -1px; font-weight:bold; }
+.wf-active .sub-content h3 { font-size:36px; letter-spacing: -1px; font-weight:bold; }
+.group:after {content: ".";display: block;height: 0;clear: both; visibility: hidden;} /* Automatically clears after any element with this class */
+.leftContent { float:left; width:480px; padding-right:20px; }
+.rightContent { float:right; width:440px; padding-left:20px; text-align: right; }
+
+
+
+
+
+/*
+# Nav #################################################################################################################################################
+*/
+
+#navSection { background:url(../images/navBG.png) repeat-x 0 0; height:100px; position:fixed; z-index:1000; width:100%; }
+.js #navSection { top:-85px; } /* If javascript enabled move navSection up out of the screen to be animated in */
+#navWrapper { width: 1020px; margin:0 auto; position:relative; overflow:visible; padding-top:5px;}
+#mainNav { height:100px; position:absolute; left:55px; width:1960px; padding-top: 8px; }
+#mainNav li { float:left; display:block;}
+#mainNav li a { color:#9E9E9E; text-decoration:none; display:block; height:41px; padding:22px 14px 0px 15px; font-size:24px;   letter-spacing: 0px; font-family:"AlegreyaRegular"; font-size:16px; }
+
+.chrome.win #mainNav li a, .gecko.win #mainNav li a, .safari.win #mainNav li a  { font-weight:normal; padding-left: 20px;}
+
+#mainNav li a:hover { color:#6E7D96; }
+/*#mainNav li.active a {color:#E3E3E3; text-decoration: underline; }*/
+#mainNav li #logo { padding-top:0px; }
+/*.wf-loading #mainNav li a { visibility:hidden; }
+.wf-active #mainNav li a { visibility:visible; }
+*/
+
+#mainNav li a#linkBenifits {padding-left:1px;}
+
+/*
+# footer bar Nav #################################################################################################################################################
+*/
+
+#footerbar_mainNav { height:100px; position:absolute;  width:auto;     padding-left: 200px; }
+#footerbar_mainNav li { float:left; display:block;}
+#footerbar_mainNav li a { color:#9E9E9E; text-decoration:none; display:block; height:41px; padding:10px 15px 0px 15px; font-size:24px;   letter-spacing: 0px; font-family:"AlegreyaRegular"; font-size:15px; }
+
+.chrome.win #footerbar_mainNav li a, 
+.gecko.win #footerbar_mainNav li a, 
+.safari.win #footerbar_mainNav li a  { font-weight:normal; padding-left: 25px;}
+
+#footerbar_mainNav li a:hover { color:#6E7D96; }
+#footerbar_mainNav li.active a { color:#E3E3E3; text-decoration: underline; }
+#footerbar_mainNav li #logo { padding-top:0px; }
+
+div#footer_links {float:right; padding-right: 30px;}
+
+ div#footer_links ul li {  display: block; float: left;}
+div#footer_links ul li a  {   color: #9E9E9E;
+    display: block;
+    font-family: "AlegreyaRegular";
+    font-size: 15px;
+    font-weight: normal;
+    height: 41px;
+    letter-spacing: 0;
+    padding: 15px 15px 40px;
+    text-decoration: none;
+
+
+}
+
+div#footer_links ul li a:hover { color:#6E7D96; } 
+
+div#studiofooter ul#footerbar_mainNav.nav h6 {padding-top: 15px;
+font-family: studiotext;
+font-size: 25px;
+font-weight: 200;
+padding-left: 50px;}
+
+div#studiofooter div#footer_links ul li#social_image {margin-top: -12px;}
+
+
+/*
+# Blog pages #################################################################################################################################################
+*/
+ 
+div#homeWrapper div#rightnav {
+    
+    color: #000000;
+    float: right;
+    height: 100%;
+    margin-top: 100px;
+    width: 200px;
+    z-index: 3000;
+}
+div#homeWrapper div#content.blog-post { padding-top: 80px;
+    width: 900px;}
+
+div#homeWrapper div#blogwrap {padding-top:150px;}
+
+
+
+div#content.blog-post h1 {color:#808080; padding-bottom: 15px; }
+
+div#content.blog-post div.entry {padding:15px;}
+html body div#wrapper div#home div#homeWrapper {padding-top: 0px;}
+div#content.blog-post div.postmeta {height:50px;}
+
+div#content.blog-post div#comments.post-comments div.quip ol.quip-comment-list a {font-size:20px;}
+
+
+
+
+
+/*
+# Common Pages #################################################################################################################################################
+*/
+div#homeWrapper div#main-content div#contact {padding-top:20px;}
+
+div#homeWrapper div#main-content {  margin-top: 100px;
+   }
+
+div#homeWrapper div#main-content div#map { padding-top:20px;
+    }
+div#main-content form.contactForm div label span.error span.error {background-color:#f00;}
+
+div#homeWrapper div#main-content form.contactForm div span.error{background-color:#f00;}
+/*
+# Footer bar #################################################################################################################################################
+*/
+
+
+div#footerWrapper div#studiofooter a {}
+
+
+#footerWrapper {
+    background: url("../images/navBG.png");
+    bottom: 0;
+        max-height: 50px;
+    height: 80px;
+    margin: 0 auto;
+    overflow: visible;
+  
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    color: #a0a0a0;
+
+}
+
+
+div#footerWrapper div#studiofooter div#ftrmenu ul#mainNav.nav {  float: right;
+   
+     width: 20px;}
+#ftrmenu * { 
+    padding:0; 
+    padding-left:28px;
+    margin: 0; 
+    font: 12px georgia; 
+    list-style-type:none;}
+#ftrmenu { 
+       float: right;
+    line-height: 10px;
+  margin-right:50px;
+    z-index: 1100;}
+#ftrmenu a { 
+    display: block; 
+    text-decoration: none; 
+    color: #3B5330;}
+
+#ftrmenu ul li ul li a:hover { 
+    background: #ECF1E7; 
+    padding-left:9px;
+    border-left: solid 1px #000;}
+#ftrmenu ul li ul li {
+    width: 100px; 
+    border: none; 
+    color: #B0BD97;  
+    padding-top: 3px; 
+    padding-bottom:3px; 
+    padding-left: 3px; 
+    padding-right: 3px; 
+    background: #B0BD97;}
+#ftrmenu ul li ul li a { 
+    font: 11px arial; 
+    font-weight:normal; 
+    font-variant: small-caps; 
+    padding-top:3px; 
+    padding-bottom:3px;}
+#ftrmenu ul li {
+     float: left;
+padding-top: 10px;
+   }
+div#studiofooter ul#footerbar_mainNav.nav div#ftrmenu ul#mainNav.nav li center a { 
+	    background: url("../images/btn_contact.png") no-repeat scroll 0 0 transparent;
+   
+    height: 70px;
+    width: 75px;}
+#ftrmenu li{ 
+    position:relative; 
+    float:left;}
+#ftrmenu ul li ul, #menu:hover ul li ul, #menu:hover ul li:hover ul li ul{
+	margin-left:-93px; 
+text-align:center;
+	background: url("../images/contact.png") ;
+	border-right: solid 1px #444444;
+      border-left: solid 1px #444444;
+      border-top: solid 1px #444444;
+       margin-bottom:0px;
+       padding: 20px;
+    display: none;
+    height: 215px;
+    list-style-type: none;
+    width: 250px;}
+#ftrmenu:hover ul, #menu:hover ul li:hover ul, #menu:hover ul li:hover ul li:hover ul { 
+    display:block;}
+#ftrmenu:hover ul li:hover ul li:hover ul { 
+    position: absolute;
+    margin-left: 50px;
+    margin-top: -22px;
+    font: 10px;}
+#ftrmenu:hover ul li:hover ul { 
+    position: absolute;
+    margin-top: 1px;
+    font: 10px;
+}
+#ftrmenu>ul>li:hover>ul { 
+    bottom:100%;
+}
+
+
+div#footerWrapper div#studiofooter div#ftrmenu ul li ul img {padding-left:10px;}
+
+
+div#studiofooter ul#footerbar_mainNav.nav div#btmmenu {width:600px;}
+
+#btmmenu { height:100px; position:absolute; left:55px; width:1960px; padding-top: 8px; }
+#btmmenu li { float:left; display:block;}
+#btmmenu li a { color:#9E9E9E; text-decoration:none; display:block; height:41px; padding:22px 15px 0px 15px; font-size:24px;   letter-spacing: 0px; font-family:"AlegreyaRegular"; font-size:15px; }
+
+.chrome.win #btmmenu li a, .gecko.win #btmmenu li a, .safari.win #btmmenu li a  { font-weight:normal; padding-left: 25px;}
+
+#btmmenu li a:hover { color:#6E7D96; }
+#btmmenu li.active a { color:#E3E3E3; text-decoration: underline; }
+
+
+/*
+# HEADER ##############################################################################################################################################
+*/
+
+html.gecko body div#wrapper div#home { background: url(../images/header-tile.png) repeat-x 0 0; height:900px; text-align:center; position:relative; z-index: -1; background-color: #000000;}
+#logo { display:block; }
+#homeWrapper { width:960px; height:620px; margin:0 auto; position:relative; z-index: 2; }
+#headerLogo { position:absolute; top:560px; right:230px; }
+#planeHit { position:absolute; top:112px; left:312px; width:400px; }
+a#plane { display:block; text-decoration:none; width:322px; height:54px; overflow:hidden; text-indent: -9999px; background: url(../images/sprite-facebook-plane.png) no-repeat 0 0; }
+a#plane:hover { background-position: 0 -60px; }
+
+    
+div#home_message {
+    font-size: 16px;
+    color:#FFFFFF;
+    height: 400px;
+    margin-top: -470px;
+    padding-left: 60px;
+    text-align: left;
+    text-indent: 25px;
+    width: 800px;
+    z-index: 2;
+}
+/*
+#headerFacebook { position:absolute; display:block; width:184px; height:43px; top:558px; left:127px; text-indent:-9999px; overflow:hidden; background: url(../images/sprite-fb-header.png) no-repeat 0 0; }
+#headerFacebook:hover { background-position: 0 -47px; }
+*/
+/*
+# Slide One #######################################################################################################################################
+*/
+            
+#slideone { background: url(../images/about_background.png) repeat-x 0 0 #fcf9ed;  position:relative; overflow:hidden; }
+
+#slideone.content{ height:800px; overflow:visible; position:relative;}
+#element1 { position:absolute; display:block; left:0px; top:450px; width:543px; height:425px; background:url(../images/pot1.jpg) no-repeat 0 0; z-index:100;}
+#element2 { position:absolute; display:block; right:0px; top:450px; width:545px; height:426px; background:url(../images/pot2.jpg) no-repeat 0 0; z-index:101; }
+#slideone .leftContent {       color: #FFFFFF;
+    padding-left: 90px;
+    position: absolute;
+    top: 260px;
+    width: 540px;}
+div#slideone.inview div.content img {
+    border: medium none;
+    position: relative;
+}
+div#slideone.inview div.content h2 { 
+	 padding-top: 10px;
+	color: #fff;
+    font-family: studiotext;
+    font-size: 28px; 
+   height: auto;
+    margin: 0 0 0px;
+    overflow: hidden;
+    text-indent: 0px;
+    width: 920px;
+    }
+#slideone .rightContent { padding-right:65px; width:245px; }
+#slideone .rightContent img{ margin-left: 40px;}
+#swarm { position:absolute; right:0px; top:0px; width:600px; height:600px; }
+
+/*
+# Slide two ########################### background:#f7f1d1 url(../images/services.png) no-repeat center 0px; background-attachment: fixed;##########################################################################################################
+*/
+div#service-bottom div#tvsalon-services-bottom.salon-services table#perms {  font-family: studiotext;
+    font-size: 23px;
+    height: auto;
+    width: 730px;}
+#tvsalon-services-bottom { font-family: studiotext; font-size:23px;}
+#tvsalon-services-bottom h3 { font-family: studiotext; font-size:23px;}
+div#service-right div#tvsalon-color.salon-services table#salon-service1 tbody tr td h3 {color: #e4b66c; font-size:23px;}
+div#servicewrapper div#service-left div#tvsalon-cut-and-style.salon-services table#service h3 {color: #e4b66c; font-size:23px;}
+div#service-right div#tvsalon-color.salon-services table#salon-service1 {font-family: studiotext;
+    font-size: 23px;
+    width: 350px;}
+div#service-left div#tvsalon-cut-and-style.salon-services table#service {    font-family: studiotext;
+    font-size: 23px;
+    width: 350px;}
+div#slidetwo.inview div.content div#service_bottom {   height: 100px;
+    padding-left: 80px;
+    width: 800px;
+    color:#fff;}
+#slidetwo { background: url(../images/other_background.png) repeat-x 0 0 #fcf9ed; height:800px; }
+#slidetwo h2{color:#fff;  }
+#slidetwo .content{ height:528px; overflow:visible;}
+div.content div#servicewrapper {    background: url("../images/services_two.png") no-repeat scroll 0 0 transparent;
+    height: 525px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 180px;
+    padding-top: 40px;
+color:#fff;}
+div.content div#servicewrapper div#service_left {
+  float: left;
+    margin-left: 80px;
+    width: 380px;}
+div.content div#servicewrapper div#service_right {
+   float: left;
+    margin-left: 80px;
+    width: 380px;}
+div.content div#servicewrapper h1 {color:#222; padding-left:100px;padding-bottom:20px; }
+
+
+div#servicewrapper div#service-left div#tvsalon-services.salon-services h2 {width:200px;}
+div#slidetwo.inview div.content div#servicewrapper div#service-left {
+    float: left;
+    height: auto;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 350px;
+}
+div#slidetwo.inview div.content div#servicewrapper div#service-right{    float: left;
+    height: auto;
+    padding-top: 20px;
+    width: 300px;}
+div#slidetwo.inview div.content div#servicewrapper div#service-bottom{   float: left;
+    height: auto;
+    padding-left: 20px;
+    padding-top: 0px;
+    width: 100%;}
+
+/*
+# TOP 10 ##############################################################################################################################################
+*/
+div#top10 div.sub-content {
+    background: url("../images/staff_background.png") repeat scroll 0 0 #000000;
+background-repeat: none;}
+#reasonsWrapper {
+    height: 450px;
+   }
+#top10 { background: url(../images/other_background.png) repeat-x 0 0 #fcf9ed;  height: 850px; padding-top: 20px; }
+#top10 .sub-content { height: 800px;
+    margin: 0 auto;
+    padding: 100px 60px 0;
+    width: 920px;}
+#top10 .sub-content h3 { color:#333; margin-left:78px;line-height: 38px;}
+#slider-reasons li { width:235px; min-height:420px; padding: 0 16px 0 14px; overflow:hidden;}
+
+#slider-reasons li img {
+      float: left;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;}
+#slider-reasons li p {      
+    color: #FFFFFF;
+    
+    font-family: "studiotext";
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0 2px 0 5px;
+    text-indent: 15px;
+    width: auto;}
+#slider-reasons li h4 {
+  color: #FFFFFF;
+   
+    font-family: "AlegreyaRegular";
+    font-size: 24px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: center;}
+#top10 .bx-wrapper { margin: 0 auto; }
+#top10 .bx-next, #top10 .bx-prev { background: url(../images/bxslider-arrows.png);    height: 70px;
+    position: absolute;
+    text-indent: -999999px;
+    top: 170px;
+    width: 46px;
+    z-index: 999;}
+#top10 .bx-next { right: -115px; background-position: 0px 0px; }
+#top10 .bx-prev { left:-115px; background-position: 0px -140px;  }
+#top10 .bx-next:hover { background-position: 0 -70px; }
+#top10 .bx-prev:hover { background-position: 0 -210px; }
+
+/*
+# Slide Three ################background: #fcf9ed;################################################################################################################
+*/
+
+#slidethree {  background: url(../images/other_background.png) repeat-x 0 0 #fcf9ed;  height:900px;}
+#slidethree h2{ background: url(../images/title-breakfast-comparison.png) no-repeat 0 0; }
+#comparison {  background-color: #000000;
+    height: 550px;
+  margin: 30px 0 0;
+    position: relative;
+    width: 900px;}
+#comparison-pots { position:absolute; left:0; top:0; display:block;}
+#pot-dials { left:17px; }
+#vs { position:absolute; left:340px; top:140px; z-index:100;}
+#comparisonWrapper { position:absolute; left:0px; top:1px; padding-top: 20px;}
+
+#comparisonWrapper .bx-next {   background: url("../images/gallery_side.png") no-repeat scroll 0 0 transparent;
+    height: 500px;
+    position: absolute;
+    text-indent: -999999px;
+    top: 0;
+    width: 45px;
+    z-index: 999;}
+#comparisonWrapper .bx-prev {   background: url("../images/gallery_right_side.png") no-repeat scroll 0 0 transparent;
+    height: 500px;
+    left: 855px;
+    position: absolute;
+    text-indent: -999999px;
+    top: 0;
+    width: 45px;
+    z-index: 999; }
+
+
+
+#slider-comparison li { width:900px;  height: 600px; }
+#compared-dials { left:464px; }
+.dials { position:absolute; top:310px; width:374px; height:95px; background: url(../images/dials.png) }
+#dial1, #dial2, #dial3, #dial4 { position:absolute; top:4px; display:block; /* border: solid 1px #ff0000; */}
+#dial1, #dial3 { left:82px; }
+#dial2, #dial4 { left:233px; }
+
+
+/*
+# Slide Four  #############background:#f7f1d1;####################################################################################################################
+*/
+div#slidefour div.content div#products { color:#FFFFFF;}
+#slidefour {   background: url(../images/other_background.png) repeat-x 0 0 #fcf9ed; height:900px;}
+#slidefour h2{ }
+#slidefour ul { width:940px; margin-left:-10px; overflow:hidden; }
+#slidefour li { float:left; margin-top:20px; }
+#slidefour .content{     background: url("../images/productsbk.png") no-repeat; height: 580px;}
+#tellUs { position:relative; width:671px; height:144px; display:block; overflow:visible; text-indent:-9999px; background: url(../images/tell-us-facebook-1.png) no-repeat 0 0; margin: 50px auto 0 auto; }
+#tellUs:hover span{ background-position: 0 -60px; }
+#tellUs span { position:absolute; display:block; width:60px; height:60px; background: url(../images/sprite-fb-link-2.png) no-repeat 0 0; left:302px; top:50px; }
+div#products div#product_wraper {float:left;}
+div#products div#product_wraper div#bumble_product {background: url("../images/bumble_products.png") no-repeat scroll  #000000; width:280px; height:280px;}
+div#products div#product_wraper div#bumble_product:hover {background: url("../images/white_bumble_products.png") no-repeat scroll  #000000;}
+div#slidefour div.content div#products img {padding-top:5px; padding-left:5px; padding-right:5px;}
+div#slidefour div.content div#products div#pro-top-left {      float: left;
+    height: 200px;
+   padding-left: 40px;
+    padding-top: 100px;
+    width: 300px;}
+div#slidefour div.content div#products div#pro-top-right {  float: left;
+    height: 200px;
+    padding-left: 30px;
+    padding-top: 100px;
+    width: 400px;}
+div#slidefour div.content div#products div#pro-bottom-left {    float: left;
+    height: 220px;
+    padding-left: 40px;
+    width: 300px;}
+div#slidefour div.content div#products div#pro-bottom-right{     float: left;
+    height: 220px;
+   padding-left: 30px;
+    width: 400px;}
+
+div#tvproduct-one-text {text-align:left; padding-left:100px;}
+div#tvproduct-two-text {text-align:left; padding-left:100px;}
+div#tvproduct-three-text {text-align:left; padding-left:100px;}
+div#tvproduct-four-text {text-align:left; padding-left:100px;}
+/*
+# slidefive ##########################################################################################################################################
+*/
+
+#slidefive {background: url() repeat-x 0 0 #000; padding-bottom: 0px; padding-top: 20px; }
+#slidefive h2 {  }
+/* #slidefive h3 { font-size:26px; color:#ffffff; line-height:36px; margin: 20px 0 20px 0; font-weight:bold; } */
+#slidefive .content h3 { width:344px; height:100px; overflow:hidden; text-indent:-9999px; background: url(../images/subtitle-then-and-now.png) no-repeat 0 0; margin:20px 0 30px 0; }
+.wf-active #slidefive h3 { font-size:36px; line-height:36px; font-weight:bold; }
+#slidefive p{ color:#ffffff; }
+#bestPhotos { margin: 10px 0 0 78px; }
+#slidefive .content{ height: 300px; /* background: url(../images/then-and-now.jpg) no-repeat 434px 93px;  */}
+#slidefive .leftContent { width:400px; }
+#fbCompBtn { display: block; width:347px; height:71px; text-indent: -9999px; overflow:hidden; background: url(../images/sprite-fb-comp-btn.png) no-repeat 0 0; margin: 0px 0 0 0; }
+#fbCompBtn:hover { background-position: 0 -71px; }
+#slidefive #coupon{ background:#0079a5 url(../images/dashed-line-2.png) repeat-x 0 0; height:216px;}
+#coupon .sub-content { position:relative; height:190px; background: url(../images/coupon-bg.jpg) no-repeat 0 5px; padding: 20px 20px 0 20px; margin-bottom:2px; }
+#coupon-text { position:absolute; width:405px; left:220px; top:45px; }
+#coupon-text h3 { font-size:26px; color:#ffffff; line-height:36px; margin: 0px 0 20px 0; font-weight:bold;  }
+#couponDownload { display:block; position: absolute; left:658px; top:77px; background: url(../images/btn-voucher-download.png) no-repeat 0 0; width:279px; height:102px; text-indent:-9999px; overflow: hidden; }
+#couponDownload:hover { background-position: 0 -102px; }
+
+
+
+
+/*
+# Slide six  #################################################################################################################################
+*/
+div#services-wrapper div#services-manicure div#tvspa-services-manicures table#services3 tbody tr td h3  {color:#e4b66c;    font-family: studiotext;
+    font-size: 26px;}
+div#slidesix div.content div#salon_services div#services-wrapper div#services-waxing div#tvspa-services-waxing table#services2 { height: auto;
+    width: 800px;  font-size: 23px;}
+div#services-manicure div#tvspa-services-manicures table#services3 { height: auto;
+    width: 755px;   font-family: studiotext;
+    font-size: 23px;}
+div#slidesix a div.content div#salon_services div#tvspa-services table#service1 tbody tr td h3 img {width:25px; height:auto; float:left; padding-bottom: 5px;
+    padding-top: 5px;}
+
+div#slidesix div.content div#salon_services div#tvspa-services table#service1 {
+    font-family: studiotext;
+    font-size: 23px;
+    height: auto;
+    width: 713px;
+}
+div#salon_services div#tvspa-services table#service1 tbody tr td h3 {color:#e4b66c; font-size:26px; padding-top: 5px;}
+div#services-waxing div#tvspa-services-waxing table#services2 tbody tr td h3 {color:#e4b66c; font-size:26px;}
+#slidesix {  background: url("../images/other_background.png") repeat-x scroll 0 0 #FCF9ED;
+    height: auto;
+    min-height: 1300px;}
+#slidesix h2{ color:#221F1F;  }
+#slidesix ul { width:940px; margin-left:-10px; overflow:hidden; }
+#slidesix li { float:left; margin-top:20px; }
+div#slidesix a div.content div#salon_services div#tvspa-services {padding-top:50px;}
+#slidesix .content {
+ 
+  height: 1000px;
+  margin-top: 120px;
+
+
+
+
+}
+
+
+
+
+div#slidesix div.content div#salon_services {
+    background: url("../images/services_muse1.png") repeat-x scroll 0 0 #000000;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 7px 7px 7px #B3B3B3;
+    color: #FFFFFF;
+    height: auto;
+    margin-top: 30px;
+    padding: 50px 15px 15px;
+}
+div#slidesix div.content div#salon_services img {float:right;}
+
+div#slidesix div.content div#salon_services h5 { background: url(../images/spa-title.png) no-repeat 0 0;height:50px; padding-bottom: 15px;}
+
+
+div#salon_services div#tvspa-services table tbody tr td img {margin-top:-26px;}
+
+
+
+
+div#slidesix div.content div#salon_services div#services-wrapper div#services-manicure {
+  font-family: studiotext;
+    font-size: 23px; 
+    padding-top: 20px;
+    width: 375px;}
+
+div#slidesix div.content div#salon_services div#services-wrapper div#services-waxing{ 
+  font-family: studiotext;
+    font-size: 23px;
+    padding-top: 10px;
+    width: 700px;}
+/*
+# TEST##############################################################################################################################################
+*/
+
+
+div#test{  background: url() repeat-x 0 0 #fcf9ed; height:700px;}
+#ctest .sub-content { position:relative; height:190px; background: url(../images/coupon-bg.jpg) no-repeat 0 5px; padding: 20px 20px 0 20px; margin-bottom:2px; }
+#test-text { position:absolute; width:405px; left:220px; top:45px; }
+#ctest-text h3 { font-size:26px; color:#ffffff; line-height:36px; margin: 0px 0 20px 0; font-weight:bold;  }
+#testDownload { display:block; position: absolute; left:658px; top:77px; background: url(../images/btn-voucher-download.png) no-repeat 0 0; width:279px; height:102px; text-indent:-9999px; overflow: hidden; }
+#ctestDownload:hover { background-position: 0 -102px; }
+
+/*
+# FOOTER ##############################################################################################################################################
+*/
+div#footer div.footer-content div#by p a {color:#f18817}
+div.footer-content div#by {float:right;}
+#footer { background: #000; height:500px; color:#a99b9c; }
+#footer p {
+    color: #A99B9C;
+    font-size: 18px;
+    text-align: center;
+}
+#footer a { color:#A99B9C; text-decoration:none; margin-right:20px; font-size:20px;}
+#footer a:hover { text-decoration:underline; }
+#footer ul { margin-top:20px; }
+#footer li { float:left; font-size:12px; }
+#footer li a { text-decoration:none; color:#f2b111; }
+#footer #facebook { position:absolute; left:712px; top:95px; width:126px; height:54px; overflow:hidden; text-indent: -9999px; background:#fff; }
+#footer #facebook a { display:block; width:126px; height:54px;}
+#footer #facebook a:hover { background-position: 0 -55px; }
+#footerLogo {
+    display: block;
+    height: 35px;
+    position: absolute;
+    top: 130px;
+    width: 77px;
+}
+#otherLinks p{ font-size:11px; }
+/*
+# OVERLAY LOADER ######################################################################################################################################
+*/
+
+#overlay { width:100%; height:100%; background-color: #000; background-position: fixed; position:fixed; z-index:10000; left:0; top:0; }
+#preloader { width:250px; height:80px; position:relative; z-index:10000; top:20%; left: -200px; margin:0px auto 0 auto; }
+#loader {  }
+
+/*
+# GENERAL #############################################################################################################################################
+*/
+
+img{border:none;}
+img.left{margin:0 10px 10px 0;}
+img.right{margin:0 0 10px 10px;}
+.highlight { font-size:16px; line-height:24px; color:#d69800; font-weight:bold; text-transform: uppercase; }
+.wf-active .highlight { font-size:24px; line-height:28px; font-weight:normal; }
+.small { font-size:12px; line-height:18px; }
+.right{float:right;}
+.left{float:left;}
+.clear{clear:both;}
+.alignleft{text-align: left;}
+.alignright{text-align: right;}
+.aligncenter{text-align: center;}
+
+
+
+/*
+# STaff #############################################################################################################################################
+*/
+
+
+
+
+/* Showcase
+-------------*/
+
+#awOnePageButton .view-slide
+{
+	display: none;
+}
+
+/* This class is removed after the showcase is loaded */
+/* Assign the correct showcase height to prevent loading jumps in IE */
+.showcase-load
+{
+	height: 470px; /* Same as showcase javascript option */
+	overflow: hidden;
+}
+
+/* Container when content is shown as one page */
+.showcase-onepage
+{
+	/**/
+}
+
+/* Container when content is shown in slider */
+.showcase
+{
+	position: relative;
+	margin: auto;
+}
+
+	.showcase-content-container
+	{
+		background-color: #000;
+	}
+	
+	/* Navigation arrows */
+	.showcase-arrow-previous, .showcase-arrow-next
+	{
+		position: absolute;
+		background: url('../images/arrows.png');
+		width: 33px;
+		height: 33px;
+		top: 220px;
+		cursor: pointer;
+	}
+	
+	.showcase-arrow-previous
+	{
+		left: -60px;
+	}
+	
+	.showcase-arrow-previous:hover
+	{
+		background-position: 0px -34px;
+	}
+	
+	.showcase-arrow-next
+	{
+		right: -56px;
+		background-position: -34px 0;
+	}
+	
+	.showcase-arrow-next:hover
+	{
+		background-position: -34px -34px;
+	}
+	
+	/* Content */
+	.showcase-content
+	{
+		background-color: #000;
+		text-align: center;
+	}
+		
+		.showcase-content-wrapper
+		{
+			text-align: center;
+			height: 470px;
+			width: 700px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		/* Styling the tooltips */
+		.showcase-plus-anchor
+		{
+			background-image: url('../images/plus.png');
+			background-repeat: no-repeat;
+		}
+		
+		.showcase-plus-anchor:hover
+		{
+			background-position: -32px 0;
+		}
+		
+		div.showcase-tooltip
+		{
+			background-color: #fff;
+			color: #000;
+			text-align: left;
+			padding: 5px 8px;
+			background-image: url(../images/white-opacity-80.png);
+		}
+		
+		/* Styling the caption */
+		.showcase-caption
+		{
+			color: #000;
+			padding: 8px 15px;
+			text-align: left;
+			position: absolute;
+			bottom: 10px; left: 10px; right: 10px;
+			display: none;
+			background-color:#000000;
+			opacity: 0.80;
+			width:270px;
+			height:440px;
+		}
+		
+	.showcase-onepage .showcase-content
+	{
+		margin-bottom: 10px;
+	}
+	
+div.showcase-caption h2#bio_head {color:#FFFFFF;}
+div.showcase-caption div#bio{color:#FFFFFF;}
+	
+	/* Button Wrapper */
+	.showcase-button-wrapper
+	{
+		clear: both;
+		margin-top: 10px;
+		text-align: center;
+	}
+	
+		.showcase-button-wrapper span
+		{
+			margin-right: 3px;
+			padding: 2px 5px 0px 5px;
+			cursor: pointer;
+			font-size: 12px;
+			color: #444444;
+		}
+	
+		.showcase-button-wrapper span.active
+		{
+			color: #fff;
+		}
+	
+	/* Thumbnails */
+	.showcase-thumbnail-container /* Used for backgrounds, no other styling!!! */
+	{
+		background-color: #000;
+	}
+	
+	.showcase-thumbnail-wrapper
+	{
+		overflow: hidden;
+	}
+		
+		.showcase-thumbnail
+		{
+			width: 120px;
+			height: 90px;
+			cursor: pointer;
+			border: solid 1px #333;
+			position: relative;
+		}
+		
+			.showcase-thumbnail-caption
+			{
+				position: absolute;
+				bottom: 2px;
+				padding-left: 10px;
+				padding-bottom: 5px;
+			}
+			
+			.showcase-thumbnail-content
+			{
+				padding: 10px;
+				text-align: center;
+				padding-top: 25px;
+			}
+			
+			.showcase-thumbnail-cover
+			{
+				background-image: url(../images/black-opacity-40.png);
+				position: absolute;
+				top: 0; bottom: 0; left: 0; right: 0;
+			}
+		
+		.showcase-thumbnail:hover
+		{
+			border: solid 1px #999;
+		}
+		
+			.showcase-thumbnail:hover .showcase-thumbnail-cover
+			{
+				display: none;
+			}
+		
+		.showcase-thumbnail.active
+		{
+			border: solid 1px #999;
+		}
+		
+			.showcase-thumbnail.active .showcase-thumbnail-cover
+			{
+				display: none;
+			}
+	
+	.showcase-thumbnail-wrapper-horizontal
+	{
+		padding: 10px;
+	}
+	
+		.showcase-thumbnail-wrapper-horizontal .showcase-thumbnail
+		{
+			margin-right: 10px;
+			width: 116px;
+		}
+	
+	.showcase-thumbnail-wrapper-vertical
+	{
+		padding: 10px;
+	}
+	
+		.showcase-thumbnail-wrapper-vertical .showcase-thumbnail
+		{
+			margin-bottom: 10px;
+		}
+		
+	.showcase-thumbnail-button-backward,
+	.showcase-thumbnail-button-forward
+	{
+		padding: 7px;
+		cursor: pointer;
+	}
+	
+	.showcase-thumbnail-button-backward
+	{
+		padding-bottom: 0px;
+		padding-right: 0px;
+	}
+	
+		.showcase-thumbnail-button-backward .showcase-thumbnail-vertical,
+		.showcase-thumbnail-button-forward .showcase-thumbnail-vertical,
+		.showcase-thumbnail-button-forward .showcase-thumbnail-horizontal,
+		.showcase-thumbnail-button-backward .showcase-thumbnail-horizontal
+		{
+			background-image: url(../images/arrows-small.png);
+			background-repeat: no-repeat;
+			display: block;
+			width: 17px;
+			height: 17px;
+		}
+		
+		.showcase-thumbnail-button-backward .showcase-thumbnail-vertical
+		{
+			background-position: 0 -51px;
+			margin-left: 55px;
+		}
+		.showcase-thumbnail-button-backward:hover .showcase-thumbnail-vertical
+		{
+			background-position: -17px -51px;
+		}
+		
+		.showcase-thumbnail-button-forward .showcase-thumbnail-vertical
+		{
+			background-position: 0 -34px;
+			margin-left: 55px;
+		}
+		.showcase-thumbnail-button-forward:hover .showcase-thumbnail-vertical
+		{
+			background-position: -17px -34px;
+		}
+		
+		.showcase-thumbnail-button-backward .showcase-thumbnail-horizontal
+		{
+			background-position: 0 -17px;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+		.showcase-thumbnail-button-backward:hover .showcase-thumbnail-horizontal
+		{
+			background-position: -17px -17px;
+		}
+		
+		.showcase-thumbnail-button-forward .showcase-thumbnail-horizontal
+		{
+			background-position: 0 0;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+		.showcase-thumbnail-button-forward:hover .showcase-thumbnail-horizontal
+		{
+			background-position: -17px 0;
+		}
+		
+		/* Hide button text */
+		.showcase-thumbnail-button-forward span span,
+		.showcase-thumbnail-button-backward span span
+		{
+			display: none;
+		}
+	
+
+
+/* Clear (used for horizontal thumbnails)
+-------------------------------------------*/
+
+.clear
+{
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	float: none;
+}
+
+
+
+/* Staff Profile page
+-------------------------------------------*/
+
+html body div#wrapper div#Staff {  height:800px; text-align:center; position:relative; background-color: #221f1f; padding-top:150px;}
+
+
+html body#top.preview div.container section#typography div#tvschedules {padding-left:40px;}
+
+.footer-content {
+    color: #685254;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 0px 20px 0;
+    position: relative;
+    width: 920px;
+}
+
+
+div#footerWrapper div#studiofooter {
+
+    margin: 0 auto;
+    
+    position: relative;
+    width: 1000px;
+}

@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 11, 2015, 11:09:52 PM
+    Author     : davidwetherell
+*/
+
+@media only screen and (min-width:768px) and (max-width: 991px) 	{
+    
+    div.footer-content div#fb {
+        display: none;
+    }
+    .footer-content {
+        height: 80px;
+    }
+    .main-menu li a  {
+        font-size: 22px;
+    }
+   #footer{
+          opacity: 1;
+    }
+    div.footer-content div#by {
+          display: none;
+    }
+    .owl-theme .owl-controls .owl-buttons .owl-next {
+        font-size: 36px;
+    }
+      .owl-theme .owl-controls .owl-buttons .owl-prev {
+        font-size: 36px;
+    }
+    
+    
+    	.sideBarTab {
+	padding-top: 30px;
+width: 35%;
+height: auto;
+float: right;
+position: relative;
+padding-right: 20px;
+line-height: 3;
+	}
+        
+        	.BodyTab {
+	float: left;
+width: 65%;
+	}
+    
+    
+}

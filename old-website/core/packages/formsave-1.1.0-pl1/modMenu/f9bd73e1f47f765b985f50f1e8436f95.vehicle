@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      '863a4fe027f1df08e531e8d4d572ab5b' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"formsave","controller":"index","haslayout":1,"lang_topics":"formsave:default","assets":"","help_url":"","parent":0}',
+        'guid' => 'aef45e47be40f3a2a045882fd41edc55',
+        'native_key' => 1,
+        'signature' => '3e12311c3943aacd9954df10bec3ad66',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'formsave',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7455c25d1ead8c6ff4a64fead3fc05b4',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => 'f9bd73e1f47f765b985f50f1e8436f95',
+  'native_key' => 'formsave',
+  'object' => '{"text":"formsave","parent":"components","action":1,"description":"formsave_desc","icon":"images\\/icons\\/plugin.gif","menuindex":0,"params":"","handler":"","permissions":""}',
+);

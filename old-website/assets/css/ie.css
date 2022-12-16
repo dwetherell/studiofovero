@@ -1,0 +1,5 @@
+.group {zoom: 1;}
+
+/* IE6 png fixes */
+
+#dial2, #dial4 { left:200px; }

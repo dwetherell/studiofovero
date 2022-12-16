@@ -1,0 +1,20 @@
+# Friendly URLs Part
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} .
+# Force all pages to go to www.studiofovero.com for SEO
+RewriteCond %{HTTP_HOST} !^www\.mobile.studiofovero\.com [NC]
+RewriteRule (.*) http://www.mobile.studiofovero.com/$1 [R=301,L]
+# Friendly URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+# Additional Settings Follow
+ExpiresActive On
+ExpiresByType image/gif A2592000
+ExpiresByType image/jpeg A2592000
+ExpiresByType image/png A2592000
+BrowserMatch "MSIE" brokenvary=1
+BrowserMatch "Mozilla/4.[0-9]{2}" brokenvary=1
+BrowserMatch "Opera" !brokenvary
+SetEnvIf brokenvary 1 force-no-vary

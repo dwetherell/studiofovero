@@ -1,0 +1,48 @@
+
+
+
+
+h1 { color:#FFFFFF; font-size:30px; margin-top:-13px; font-family:AlegreyaRegular;}
+.wf-active h1 {
+    color: #FFFFFF;
+    font-size: 35px;
+
+    margin-top: -11px;
+    padding-bottom: 20px;
+     font-family:AlegreyaRegular;
+}
+h6 { 
+    font-family: AlegreyaRegular;
+    font-size: 32px;
+    font-weight: 200;
+
+}
+p { margin:0 0 20px;  font-size:16px; font-family:AlegreyaRegular;}
+
+div#studiofooter ul#footerbar_mainNav.nav h6 {padding-top:12px;   font-family: AlegreyaRegular;
+    font-size: 22px;
+    font-weight: 200;}
+
+div#slideone.inview div.content h2 { 
+	 padding-top: 10px;
+	color: #fff;
+    font-family: AlegreyaRegular;
+    font-size: 28px; 
+   height: auto;
+    margin: 0 0 0px;
+    overflow: hidden;
+    text-indent: 0px;
+    width: 920px;
+    }
+
+div#homeWrapper div#blogwrap div.post h6.title {font-size:22px;}
+
+#slider-reasons li p {      
+    color: #FFFFFF;
+    float: right;
+    font-family: "AlegreyaRegular";
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 2px 0 5px;
+    text-indent: 15px;
+    width: auto;}

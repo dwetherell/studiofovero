@@ -1,0 +1,53 @@
+
+/* 
+    Created on : Jan 10, 2015, 12:29:54 PM
+    Author     : davidwetherell
+*/
+/*Old 481 - 767px*/  /*Old 200 - 480px*/   
+@media only screen and (min-width:200px) and (max-width: 767px) 	{
+
+    .navbar-default {
+        height: 1px;
+    }
+
+    
+    img#studio2LogoMobile{
+      margin-top: 5px;  
+    }
+    a.nav-expander.fixed {
+
+     margin-top: 5px;
+}
+h1, .h1 {
+font-size: 30px;
+}
+.col-lg-12 img {
+width: 100%;
+height: auto;
+}
+
+
+    
+    
+#footerLogo {
+
+width: 100%;
+text-align: center;
+}
+
+
+
+
+}
+
+
+	
+
+
+    
+
+    
+
+
+
+

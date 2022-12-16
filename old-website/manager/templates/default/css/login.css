@@ -1,0 +1,188 @@
+
+html {
+    color: #111111;
+    font-family: "Lucida Grande",Helvetica,Arial,sans-serif !important;
+    font-size: 100.01%;
+    height: 100%;
+    line-height: 1.5;
+    width: 100%;
+}
+body {
+    background: none repeat scroll 0 0 #000000;
+    font-size: 75%;
+    height: 100%;
+    width: 100%;
+}
+.warning {
+    color: #821517;
+    font-weight: bold;
+}
+.success {
+    color: #009900;
+    font-weight: bold;
+}
+#container {
+    margin: 70px auto 0;
+    width: 460px;
+}
+#modx-login-logo {
+    margin-bottom: 3px;
+}
+#modx-login-logo img {
+    width: 180px;
+}
+#modx-panel-login-div {
+    border: 1px solid #E0E0E0;
+}
+img.loginCaptcha {
+    border: 1px solid #003399;
+    height: 60px;
+    width: 148px;
+}
+.loginLicense {
+    color: #555555;
+    font-size: 90%;
+    margin: 0 auto;
+    padding-left: 20px;
+    width: 460px;
+}
+#modx-login-form-panel {
+    border: 1px solid #DDDDDD;
+}
+.x-panel-tl, .x-panel-tl .x-panel-header {
+    border: 0 none;
+    font-size: 14px;
+    padding: 3px 5px;
+}
+.x-panel-ml, .x-panel-mr, .x-panel-mc {
+    background-color: transparent;
+    border: 0 none;
+}
+.login-form-bwrap {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    color: #EEEEEE;
+    padding: 5px;
+}
+.login-form-bwrap-padding {
+    background: none repeat scroll 0 0 #222222;
+    border-radius: 5px 5px 5px 5px;
+    padding-bottom: 10px;
+}
+h2 {
+    color: #EEEEEE;
+}
+.x-panel-ml {
+    border-top: 1px solid #E4E4E4;
+    padding: 10px 20px 22px;
+}
+.x-btn button {
+    font-size: 12px;
+    height: 28px !important;
+    padding: 3px 10px 0 !important;
+}
+.x-btn:hover {
+    background: -moz-linear-gradient(center bottom , #DFDFDF 0%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #9CAF78;
+}
+.x-btn:hover button {
+    color: #636F4C;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.x-btn:active {
+    background-color: #FFFFFF;
+    background-image: none;
+    border-color: #CFCFCF #C0C0C0 #AAAAAA;
+    box-shadow: 0 0 3px #AAAAAA inset;
+    margin: 0 1px;
+}
+.modx-forgot-login {
+    float: left;
+    padding-top: 4px;
+}
+a {
+    color: #BBBBBB;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#modx-login-email {
+    width: 200px;
+}
+#modx-panel-login-div {
+    background-color: white;
+    border-radius: 3px 3px 3px 3px;
+}
+label {
+    cursor: pointer;
+}
+.login-form-item {
+    float: left;
+    margin: 0;
+}
+.login-form-item-first {
+    margin-right: 8px;
+}
+.login-form-element {
+    padding: 0;
+}
+.login-form-element .x-form-text {
+    padding: 8px;
+    width: 181px;
+}
+.login-cb-row {
+    padding: 9px 0 10px;
+}
+.x-form-check-wrap .x-form-cb-label {
+    color: #BBBBBB;
+}
+.login-cb-col {
+    float: left;
+    width: 50%;
+}
+.modx-login-fl-link {
+    cursor: pointer;
+    height: auto !important;
+    line-height: 18px;
+    margin: 2px 0 0 2px;
+    white-space: nowrap;
+}
+.modx-login-rm-cb {
+}
+.login-form-btn {
+    background: -moz-linear-gradient(center bottom , #DCDCDC 0%, #FCFCFC 100%) repeat scroll 0 0 transparent;
+    border: 2px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    color: #555555;
+    font: bold 13px arial,tahoma,helvetica,sans-serif;
+    padding: 8px 18px;
+}
+#modx-login-btn {
+    float: right;
+}
+#modx-login-btn:hover {
+    background: none repeat scroll 0 0 #DDDDDD;
+}
+#modx-fl-btn {
+    margin-left: 0;
+}
+.x-panel-mr {
+    padding-right: 0;
+}
+.x-panel-mc {
+    padding: 10px 0;
+}
+#modx-login-language-select-div {
+    bottom: 0;
+    color: #888888;
+    left: 0;
+    padding: 4px;
+    position: absolute;
+}
+#modx-login-language-select {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #AAAAAA;
+    position: relative;
+}

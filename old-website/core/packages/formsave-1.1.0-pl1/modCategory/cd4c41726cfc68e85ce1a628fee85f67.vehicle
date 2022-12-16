@@ -1,0 +1,59 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      'a38af15a9f841e79835a006e8f7a2ae7' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"FormSave","description":"A FormIt hook that allows you to save any form and export them to a variety of formats.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/\\/ Load the FormSave class\\n$formSave = $modx->getService(\'formsave\',\'FormSave\', $modx->getOption(\'formsave.core_path\', null, $modx->getOption(\'core_path\').\'components\\/formsave\\/\').\'model\\/formsave\\/\', array());\\nif (!($formSave instanceof FormSave)) return \'\';\\n\\n$formit =& $hook->formit;\\n$formValues = $hook->getValues();\\n$formTopic = $modx->getOption(\'fsFormTopic\', $formit->config, \'form\');\\n$formFields = $modx->getOption(\'fsFormFields\', $formit->config, false);\\n$formPublished = (int) $modx->getOption(\'fsFormPublished\', $formit->config, 1);\\n\\nif ($formFields !== false) {\\n\\t$formFields = explode(\',\', $formFields);\\n\\tforeach($formFields as $key => $value) {\\n\\t\\t$formFields[$key] = trim($value);\\n\\t}\\n}\\n\\n\\/\\/ Create new form object\\n$newForm = $modx->newObject(\'fsForm\');\\n\\n\\/\\/ Build the data array\\n$dataArray = array();\\nif ($formFields === false) {\\n\\t$dataArray = $hook->getValues();\\n} else {\\n\\t$values = $hook->getValues();\\n\\tforeach($formFields as $field) {\\n\\t\\tif (!isset($values[$field])) {\\n\\t\\t\\t\\/\\/ Add empty field\\n\\t\\t\\t$dataArray[$field] = \'\';\\n\\t\\t\\tcontinue;\\n\\t\\t}\\n\\t\\t\\n\\t\\t$dataArray[$field] = $values[$field];\\n\\t}\\n}\\n\\n\\/\\/ Fill the database object\\n$newForm->fromArray(array(\\n\\t\'topic\' => $formTopic,\\n\\t\'time\' => time(),\\n\\t\'published\' => $formPublished,\\n\\t\'data\' => $dataArray,\\n\\t\'ip\' => $_SERVER[\'REMOTE_ADDR\']\\n));\\n\\n\\/\\/ Save the form\\n$newForm->save();\\n\\n\\/\\/ Set the form in FormIt so you can access it in any hook through $form->formSave\\n$formit->formSave = $newForm;\\n\\nreturn true;","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"\\/\\/ Load the FormSave class\\n$formSave = $modx->getService(\'formsave\',\'FormSave\', $modx->getOption(\'formsave.core_path\', null, $modx->getOption(\'core_path\').\'components\\/formsave\\/\').\'model\\/formsave\\/\', array());\\nif (!($formSave instanceof FormSave)) return \'\';\\n\\n$formit =& $hook->formit;\\n$formValues = $hook->getValues();\\n$formTopic = $modx->getOption(\'fsFormTopic\', $formit->config, \'form\');\\n$formFields = $modx->getOption(\'fsFormFields\', $formit->config, false);\\n$formPublished = (int) $modx->getOption(\'fsFormPublished\', $formit->config, 1);\\n\\nif ($formFields !== false) {\\n\\t$formFields = explode(\',\', $formFields);\\n\\tforeach($formFields as $key => $value) {\\n\\t\\t$formFields[$key] = trim($value);\\n\\t}\\n}\\n\\n\\/\\/ Create new form object\\n$newForm = $modx->newObject(\'fsForm\');\\n\\n\\/\\/ Build the data array\\n$dataArray = array();\\nif ($formFields === false) {\\n\\t$dataArray = $hook->getValues();\\n} else {\\n\\t$values = $hook->getValues();\\n\\tforeach($formFields as $field) {\\n\\t\\tif (!isset($values[$field])) {\\n\\t\\t\\t\\/\\/ Add empty field\\n\\t\\t\\t$dataArray[$field] = \'\';\\n\\t\\t\\tcontinue;\\n\\t\\t}\\n\\t\\t\\n\\t\\t$dataArray[$field] = $values[$field];\\n\\t}\\n}\\n\\n\\/\\/ Fill the database object\\n$newForm->fromArray(array(\\n\\t\'topic\' => $formTopic,\\n\\t\'time\' => time(),\\n\\t\'published\' => $formPublished,\\n\\t\'data\' => $dataArray,\\n\\t\'ip\' => $_SERVER[\'REMOTE_ADDR\']\\n));\\n\\n\\/\\/ Save the form\\n$newForm->save();\\n\\n\\/\\/ Set the form in FormIt so you can access it in any hook through $form->formSave\\n$formit->formSave = $newForm;\\n\\nreturn true;"}',
+        'guid' => '2d5d55a2a32ee08827ed9cda13b69d5e',
+        'native_key' => NULL,
+        'signature' => '08d31eeccf1932f1390d16b5db1b40fc',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'formsave',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"formsave-1.1.0-pl1\\/modCategory\\/cd4c41726cfc68e85ce1a628fee85f67\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"formsave"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"formsave-1.1.0-pl1\\/modCategory\\/cd4c41726cfc68e85ce1a628fee85f67\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"formsave"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"formsave-1.1.0-pl1\\/modCategory\\/cd4c41726cfc68e85ce1a628fee85f67.dbchanges.resolver.resolver","type":"php","name":"dbchanges.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a122ddd5a179f5f8022796303af677f4',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'cd4c41726cfc68e85ce1a628fee85f67',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"FormSave"}',
+);

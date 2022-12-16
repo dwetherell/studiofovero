@@ -1,0 +1,13 @@
+----------------------------------------------
+David Wetherell
+Email:davidwetherell@limeflies.com
+Studio Fovero Project Notes
+----------------------------------------------
+
+Colors:
+pipped background and menu base color #221f1f
+base home page color: #fcf9ed
+Keys color: #a08657
+Muse slogans in text color: #703030
+Old color for pre-load is a nice maroon #47292b
+Theme or Style: One page loaded website with ripped paper separating the different sections..... Page one Color #8A392D

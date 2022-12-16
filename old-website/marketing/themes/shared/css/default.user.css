@@ -1,0 +1,84 @@
+/* Very basic stylesheet to show you the layout sections */
+/* Customise to your site */
+body {
+	background: #FFF;
+	font-family: "Trebuchet MS", Arial, Verdana sans-serif;
+	color: #555;
+}
+
+div {
+	margin: .2em;
+	padding: .5em;
+}
+
+
+a img {
+	border: none;
+}
+
+
+#header, #footer {
+    background-color: #000000;
+    color: #999999;
+    text-align: center;
+}
+
+#content {
+	border: 1px solid #999;
+	color: #000;
+}
+
+.navimage {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border: 1px solid #EEE;
+}
+
+/* Status Messages */
+.alert,
+.warn,
+.error {
+	clear: both;
+	padding: 5px;
+	color: #000;
+}
+#alertmsg {
+	 border: 2px solid #D7E8F0;
+}
+.alert {
+	 background: none repeat scroll 0 0 #F5F8FA;
+}
+.alert strong,
+.alert label {
+	color: green;
+}
+#warn {
+	 border: 2px solid #D7E8F0;
+}
+.warn {
+	 background: none repeat scroll 0 0 #F5F8FA;
+}
+.warn strong,
+.warn label {
+	color: #FF8000;
+}
+#error {
+	border: 2px solid #D7E8F0;
+}
+.error {
+	 background: none repeat scroll 0 0 #F5F8FA;
+}
+.error strong,
+.error label {
+	color: red;
+}
+.error input,
+.error textarea {
+	background: #FFF;
+}
+
+.required {
+	font-weight: bold;
+}
